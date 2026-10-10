@@ -1,0 +1,84 @@
+:root {
+  --bg: #1a1410;
+  --surface: #2a211c;
+  --text: #f3ebe3;
+  --muted: #b5a89c;
+  --accent: #e8a87c;
+  --border: #3d322b;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at top left, #3a2a22 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, #2a1f28 0%, transparent 45%),
+    var(--bg);
+}
+
+.site-header {
+  padding: 1.5rem 1.25rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+main {
+  padding: 1.5rem 1.25rem 3rem;
+  max-width: 42rem;
+}
+
+.home h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+}
+
+.log-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.log-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  gap: 0.15rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.rating {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.empty {
+  color: var(--muted);
+  line-height: 1.5;
+}

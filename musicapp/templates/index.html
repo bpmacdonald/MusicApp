@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="home">
+  <h1>Recent logs</h1>
+  {% if recent_logs %}
+  <ul class="log-list">
+    {% for log in recent_logs %}
+    <li>
+      <strong>{{ log.release_group.title }}</strong>
+      <span class="meta">by {{ log.release_group.artist_credit }}</span>
+      <span class="rating">{{ (log.rating / 2) }}★</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="empty">No albums logged yet. Search and rate your first release group.</p>
+  {% endif %}
+</section>
+{% endblock %}
